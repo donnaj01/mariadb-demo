@@ -1,5 +1,6 @@
 {
   "name": "MariaDB Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
   "image": "mariadb:latest",
   "forwardPorts": [
     "3306"

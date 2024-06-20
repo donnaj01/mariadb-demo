@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "mariadb"
+      MYSQL_DATABASE: "mariadb"
+      MYSQL_USER: "mariadb"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb-data:/var/lib/mysql
+
+  mysql-client:
+    image: mysql:client8.0  # Adjust version if needed
+    depends_on:
+      - mariadb
+
+volumes:
+  mariadb-data:
