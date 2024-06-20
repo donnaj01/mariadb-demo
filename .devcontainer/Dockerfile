@@ -1,5 +1,4 @@
-ARG VARIANT=3.16
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
+FROM mcr.microsoft.com/devcontainers/java:1-21-bullseye
 
 # FROM mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye
 

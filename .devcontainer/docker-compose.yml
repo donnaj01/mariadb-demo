@@ -3,9 +3,10 @@ version: "3.8"
 services:
   app:
     container_name: mariadb
+    image: alpine:latest
     build: 
       context: .
-      dockerfile: Dockerfile
+      # dockerfile: Dockerfile
     volumes:
       - ../..:/workspaces:cached
       
