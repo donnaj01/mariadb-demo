@@ -10,7 +10,7 @@
     "MYSQL_USER": "mariadb",
     "MYSQL_PASSWORD": "mariadb"  
   },
-  "postCreateCommand": "sh -c 'mysql -u root -p$MYSQL_ROOT_PASSWORD -e CREATE DATABASE $MYSQL_DATABASE; GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'%'; FLUSH PRIVILEGES;"
+  "postCreateCommand": "sh -c mysql -u root -p$MYSQL_ROOT_PASSWORD -e CREATE DATABASE $MYSQL_DATABASE; GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO $MYSQL_USER@%; FLUSH PRIVILEGES;"
   ,
   "customizations": {
         "vscode": {
