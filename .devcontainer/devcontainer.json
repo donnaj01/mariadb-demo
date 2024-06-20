@@ -1,23 +1,17 @@
 {
-  "name": "MariaDB Dev Container",
+  "name": "MariaDB Development",
   "dockerComposeFile": "docker-compose.yml",
-  "image": "mariadb:latest",
-  "forwardPorts": [
-    "3306"
-  ],
-  "environment": {
-    "MYSQL_ROOT_PASSWORD": "mariadb",
-    "MYSQL_DATABASE": "mariadb",
-    "MYSQL_USER": "mariadb",
-    "MYSQL_PASSWORD": "mariadb"  
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+      "ghcr.io/devcontainers/features/node:1": {}
   },
-  // "postCreateCommand": "sh -c mysql -u root -p$MYSQL_ROOT_PASSWORD -e CREATE DATABASE $MYSQL_DATABASE; GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO $MYSQL_USER@%; FLUSH PRIVILEGES;",
-  "postCreateCommand": "sh -c '/usr/bin/mysql -u root -p$MYSQL_ROOT_PASSWORD -e \"CREATE DATABASE $MYSQL_DATABASE; GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO $MYSQL_USER@%; FLUSH PRIVILEGES;",
   "customizations": {
-        "vscode": {
-            "extensions": [
-                "cweijan.vscode-database-client2"
-            ]
-        }
-    },
+      "vscode": {
+          "extensions": [
+            "cweijan.vscode-database-client2"
+          ]
+      }
+  }
+
 }
