@@ -1,0 +1,9 @@
+{
+    "name": "MariaDB Development",
+    "image": "mariadb:latest",
+    "forwardPorts": [
+      "3306"
+    ],
+    "postCreateCommand": "sh -c 'mysql -u root -e \"CREATE DATABASE mysqldb; GRANT ALL PRIVILEGES ON mysqldb.* TO 'bppdev'@'%'; FLUSH PRIVILEGES;\"",
+  }
+  
