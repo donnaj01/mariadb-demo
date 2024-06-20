@@ -1,9 +1,21 @@
 {
-    "name": "MariaDB Development",
-    "image": "mariadb:latest",
-    "forwardPorts": [
-      "3306"
-    ],
-    "postCreateCommand": "sh -c 'mysql -u root -e \"CREATE DATABASE mysqldb; GRANT ALL PRIVILEGES ON mysqldb.* TO 'bppdev'@'%'; FLUSH PRIVILEGES;\"",
-  }
-  
+  "name": "MariaDB Dev Container",
+  "image": "mariadb:latest",
+  "forwardPorts": [
+    "3306"
+  ],
+  "environment": {
+    "MYSQL_ROOT_PASSWORD": "mariadb",
+    "MYSQL_DATABASE": "mariadb",
+    "MYSQL_USER": "mariadb",
+    "MYSQL_PASSWORD": "mariadb"  
+  },
+  "postCreateCommand": "sh -c 'mysql -u root -p$MYSQL_ROOT_PASSWORD -e \"CREATE DATABASE $MYSQL_DATABASE; GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO \\'$MYSQL_USER\\'@\\'%'; FLUSH PRIVILEGES;\"",
+  "customizations": {
+        "vscode": {
+            "extensions": [
+                "cweijan.vscode-database-client2"
+            ]
+        }
+    },
+}
