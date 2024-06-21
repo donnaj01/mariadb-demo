@@ -1,5 +1,5 @@
 # SQL Devlopment with MariaDB/MySQL
-![SQL BANNER](file:///Resources/img/SQL-Banner.jpg)
+![SQL BANNER](https://github.com/idrisfab/mariadb-demo/blob/main/Resources/img/SQL-Banner.jpg?raw=true)
 
 ## Contents
 1: Getting Started - Setting up your environments     
