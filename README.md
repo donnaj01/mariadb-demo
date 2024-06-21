@@ -1,4 +1,11 @@
 # SQL Devlopment with MariaDB/MySQL
+![SQL BANNER](file:///Resources/img/SQL-Banner.jpg)
+
+## Contents
+1: Getting Started - Setting up your environments     
+2: SQL Basics  
+3: SQL Challages 
+
 
 ## SQL Basics
 Lesson: Basic SQL - SELECT Statements, Primary Keys & Joins
