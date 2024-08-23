@@ -9,7 +9,8 @@
   "customizations": {
       "vscode": {
           "extensions": [
-            "cweijan.vscode-database-client2"
+            "cweijan.vscode-database-client2",
+            "ms-vsliveshare.vsliveshare"
           ]
       }
   }
