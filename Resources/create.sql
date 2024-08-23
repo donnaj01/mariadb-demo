@@ -14,6 +14,8 @@ CREATE TABLE Employees (
     JobTitle VARCHAR(50) NOT NULL
 );
 
+-- BOOM
+
 -- Table to store employee details (one-to-one relationship with Employees)
 CREATE TABLE EmployeeDetails (
     EmployeeDetailID INT AUTO_INCREMENT PRIMARY KEY,
